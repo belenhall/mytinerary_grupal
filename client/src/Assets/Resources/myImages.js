@@ -1,0 +1,38 @@
+var myImages = {
+  logo: require("./images/MYtineraryLogob.svg"),
+  homeIcon: require("./images/homeIcon.png"),
+  circledRight: require("./images/circled-right-2.png"),
+  personLogo: require("./images/person-icon.png"),
+  turismo1: require("./images/turismoimg10.jpg"),
+  turismo2: require("./images/turismoimg11.jpg"),
+  turismo3: require("./images/turismoimg12.jpg"),
+  cities: {
+    Barcelona: require("./images/cities/barcelona.jpg"),
+    Madrid: require("./images/cities/madrid.jpg"),
+    Mordor: require("./images/cities/mordor.jpg"),
+    Paris: require("./images/cities/paris.jpg"),
+    Lyon: require("./images/cities/lyon.jpg"),
+    New_York: require("./images/cities/new_york.jpg"),
+    Berlin: require("./images/cities/berlin.jpg"),
+    Bucharest: require("./images/cities/bucharest.jpg"),
+    Bangkok: require("./images/cities/bangkok.jpg"),
+    Bangalore: require("./images/cities/bangalore.jpg"),
+    London: require("./images/cities/london.jpg"),
+    Rome: require("./images/cities/rome.jpg"),
+    Budapest: require("./images/cities/budapest.jpg"),
+    Hamburg: require("./images/cities/hamburg.jpg"),
+    Warsaw: require("./images/cities/warsaw.jpg"),
+    Belgrade: require("./images/cities/belgrade.jpg"),
+    Vienna: require("./images/cities/vienna.jpg"),
+    Milan: require("./images/cities/milan.jpg"),
+    Munich: require("./images/cities/munich.jpg"),
+    Prague: require("./images/cities/prague.jpg"),
+    Sofia: require("./images/cities/sofia.jpg"),
+    Napoli: require("./images/cities/napoli.jpg"),
+    Stockholm: require("./images/cities/stockholm.jpg"),
+    Helsinki: require("./images/cities/helsinki.jpg"),
+    Copenhagen: require("./images/cities/copenhagen.jpg"),
+    Oslo: require("./images/cities/oslo.jpg")
+  }
+};
+export default myImages;

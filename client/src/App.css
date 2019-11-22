@@ -1,0 +1,205 @@
+.App {
+  text-align: center;
+  align-items:center;
+  /*background-color: #dfe8fa;*/
+/*   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+}
+
+.App-logo {
+  height: 30vmin;
+}
+
+.App-header {
+ /*  background-color:#becedf; */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color:#3c4f57;
+}
+
+.App-link {
+  color:#3c4f57;
+}
+
+.footer{
+  font-family: 'ZCOOL XiaoWei', serif;  
+  color:#3c4f57;
+}
+
+/* NAVIGATION BAR */
+.dropdown-menu{
+  border:none !important;
+ /*  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); */
+  opacity: 0.9;
+}
+
+.back {
+  background-image: linear-gradient(
+    to right,
+    #ff8177 0%,
+    #ff867a 0%,
+    #ff8c7f 21%,
+    #f99185 52%,
+    #cf556c 78%,
+    #b12a5b 100%
+  )}
+
+  .navLinkOutline{
+    text-shadow: 0 1px 0 rgba(68, 66, 66, 0.603);
+  }
+
+.dropdown-toggle::after{
+  content: none !important;
+}
+
+#navBar{
+  width: 100%;
+  display:fixed-top;
+}
+
+/* LOGO */
+#user-logo{
+  height:3rem;
+}
+
+#banner{
+  height:30vmin;
+}
+#Arrow{
+  height:12rem;
+  border-radius:40%;
+}
+
+#home-icon{
+  height:2rem;
+  align-content: center;
+  margin-bottom:4%;
+  margin-top:2%;
+  opacity: 0.7;
+}
+
+#main{
+  align-items: center;
+}
+
+/* TEXT STYLING */
+p {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 300;
+/*   color:#3c4f57; */
+  font-size:200%;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.7);
+ }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fjalla One', sans-serif;
+  font-weight: 900;
+  color:#4d6d7a;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.603);
+  padding-top:2%;
+ }
+.cool-touch{
+  font-family: 'Fjalla One', sans-serif;
+  font-size:100%;
+  color:#db2f00;
+}
+a{
+  text-decoration: none;
+}
+
+
+/* CAROUSEL */
+#carousel{
+  background-image: linear-gradient(to top, #eeeeee 0%, #e2ebf0 70%); 
+  border-radius:2%;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+.carousel-control-next-icon{
+  z-index:500;
+}
+.carousel-control-prev-icon{
+  z-index:500;
+}
+.carousel-control-next-icon:hover{
+ /*  background-color:#3c4f57!important; */
+  border-radius:50%;
+  opacity:0.7;
+}
+.carousel-control-prev-icon:hover{
+/*   background-color:#3c4f57!important; */
+  border-radius:50%;
+  opacity:0.7;
+}
+
+.imgSize{
+  margin-bottom:4%;
+  margin-right:0%;
+  margin-left:0%;
+}
+
+/* FORM LOGIN */
+#logForm{
+  background-image: linear-gradient(to top, #eeeeee 0%, #e2ebf0 70%); 
+  width:60%;
+  min-width:6rem;
+  padding-left:12%;
+  padding-bottom:5%;
+  padding-top:5%; 
+  margin-left:21%;
+/* S */
+  border-radius:3%;
+}
+
+/* DISCOUNT LABEL */
+#price-label{ 
+  position: absolute;
+  z-index:300;
+  margin-left:52%;
+  line-height: auto;
+  font-size: 30px;
+  font-size: 3.1vw;
+  box-sizing: inherit;
+
+}
+
+#cinta{
+  width: 30%;
+  height:auto;
+  position: absolute;
+  margin-left:0.9rem;
+  margin-top: 0.53rem;
+  z-index:140;
+}
+
+/* CITY ARTICLE */
+
+#nameOnPic{
+  z-index:500;
+  display: flex-start;
+  text-align: left;
+  padding-top:18vh;
+  margin-top:6vh;
+}
+
+#cityPic{
+position:absolute;
+z-index:100;
+padding-top:2%;
+}
+
+#cityDescrip{
+
+}
+
+#labelCity{
+  padding-top:10%;
+  position: absolute;
+  z-index:100;
+  opacity: 0.95;
+}
+.featuretteTitle {
+  color: red;
+}
