@@ -18,7 +18,7 @@ const navBar = () => {
        <Navbar.Toggle aria-controls="basic-navbar-nav" className={"bg-white"}/>
        <Navbar.Collapse id="basic-navbar-nav" >
          <Nav className="mr-auto">
-           <Nav.Link as={Link} className="text-white navLinkOutline" to="/index">Home</Nav.Link>
+           <Nav.Link as={Link} className="text-white navLinkOutline" to="/">Home</Nav.Link>
            <Nav.Link as={Link} className="text-white navLinkOutline" to="/cities">Cities</Nav.Link>
            <Nav.Link className="text-white navLinkOutline"to="/BF">Black Friday</Nav.Link>
          </Nav>

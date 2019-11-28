@@ -1,0 +1,80 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Program Files (x86)\Yarn\bin\yarn.js install -g
+
+PATH: 
+  C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\windows\system32;C:\windows;C:\windows\System32\Wbem;C:\windows\System32\WindowsPowerShell\v1.0\;C:\windows\System32\OpenSSH\;C:\Program Files\nodejs\;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files (x86)\Yarn\bin\;"C:\Users\juan.ignacio.echaide\AppData\Local\Microsoft\WindowsApps;C:\Users\juan.ignacio.echaide\Documents\Gradle\gradle-5.6.1-all.zip\gradle-5.6.1\bin;C:\Program Files (x86)\Java\jre1.8.0_211\bin;C:\Program Files (x86)\mingw-w64\i686-8.1.0-posix-dwarf-rt_v6-rev0\mingw32\bin;";C:\Users\juan.ignacio.echaide\AppData\Local\Programs\Git\cmd;C:\Users\juan.ignacio.echaide\AppData\Roaming\npm;C:\Users\juan.ignacio.echaide\AppData\Local\Programs\Microsoft VS Code\bin;C:\Program Files\nodejs\node_modules\npm\bin;C:\Users\juan.ignacio.echaide\AppData\Local\Yarn\bin
+
+Yarn version: 
+  1.19.1
+
+Node version: 
+  12.10.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ECONNREFUSED 127.0.0.1:5000
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1126:14)
+
+npm manifest: 
+  {
+    "name": "mytinerary",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+      "bootstrap": "^4.3.1",
+      "express": "^4.17.1",
+      "jquery": "^3.4.1",
+      "mongoose": "^5.7.10",
+      "proxy": "http://127.0.0.1:5000/",
+      "react": "^16.11.0",
+      "react-bootstrap": "^1.0.0-beta.14",
+      "react-dom": "^16.11.0",
+      "react-router-dom": "^5.1.2",
+      "react-scripts": "3.2.0"
+    },
+    "scripts": {
+      "client": "cd client && yarn start",
+      "test": "react-scripts test",
+      "server": "nodemon server.js",
+      "dev":"concurrently --kil-others-on-fail \"yarn server\" \"yarn client\""
+    },
+    "eslintConfig": {
+      "extends": "react-app"
+    },
+    "browserslist": {
+      "production": [
+        ">0.2%",
+        "not dead",
+        "not op_mini all"
+      ],
+      "development": [
+        "last 1 chrome version",
+        "last 1 firefox version",
+        "last 1 safari version"
+      ]
+    },
+    "devDependencies": {
+      "nodemon": "^1.19.4",
+      "concurrently":"^5.0.0"
+    },
+    "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+    "main": "server.js",
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/juanIgnacioEchaide/MYtineraryApp.git"
+    },
+    "author": "Me",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/juanIgnacioEchaide/MYtineraryApp/issues"
+    },
+    "homepage": "https://github.com/juanIgnacioEchaide/MYtineraryApp#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

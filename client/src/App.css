@@ -203,3 +203,13 @@ padding-top:2%;
 .featuretteTitle {
   color: red;
 }
+
+.imagenDamero {
+  height: "20vh" !important;
+  width: "20vh" !important;
+}
+
+.imagenCarousel {
+  height: "40vh" !important;
+  width: "40vh" !important;
+}

@@ -18,10 +18,11 @@ class BrowsingContainer extends Component {
     };
 
     render() {
-        var callback = this.props.callback
+        
+        
         return (
             <div>
-                <Browsing call={callback} cambiaColor={this.cambiaColor} flecha={this.state.flecha}>
+                <Browsing listaDeCiudades={this.props.listaDeCiudades} cambiaColor={this.cambiaColor} flecha={this.state.flecha}>
                 
                 </Browsing>
             </div>

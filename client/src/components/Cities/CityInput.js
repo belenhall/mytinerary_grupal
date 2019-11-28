@@ -2,8 +2,8 @@ import React from "react";
 import { Component } from "react";
 
 export default class CityInput extends Component {
- sendToParent = object => {
-   this.props.callbackFromParent(object);
+  sendToParent = object => {
+    this.props.callbackFromParent(object);
   };
 
   handleChange(event) {
