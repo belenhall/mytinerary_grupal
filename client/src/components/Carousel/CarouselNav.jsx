@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import CarouselBoots from "react-bootstrap/Carousel";
-import Price from "../Price/Price";
+// import Price from "../Price/Price";
 import ImageButton from "../Cities/imageButton";
 import { connect } from "react-redux";
 
@@ -26,25 +26,25 @@ class CarouselNav extends Component {
     //variables
     return (
       <div id={"carousel"} className="col-12">
-        <h1 className={"display-6"}>Most Popular MYtinerary</h1>
+        <h1 className={"display-6"}>Most Popular MYtineraries</h1>
         <CarouselBoots>
           {quadrupleCarouselItems.map(item => (
             <CarouselBoots.Item className="container">
               <div className={"col-12 row align-items-center"}>
-                <Price></Price>
+                {/* <Price></Price> */}
                 {item.map((ciudad, index) => (
                   <ImageButton
-                    style={{ width: "100%", height: "100%" }}
-                    height={this.props.height}
-                    width={this.props.width}
-                    className="d-block w-100 carousel col-6"
-                    className={"imgSize col-6"}
-                    style={{
-                      width: "100%",
-                      height: "100%",
-                      paddingBottom: "10%"
-                    }}
-                    className="carouselImg"
+                    // style={{ width: "100%", height: "100%" }}
+                    // height={this.props.height}
+                    // width={this.props.width}
+                    // className="d-block w-100 carousel col-6"
+                    // className={"imgSize col-6"}
+                    // style={{
+                    //   width: "100%",
+                    //   height: "100%",
+                    //   paddingBottom: "10%"
+                    // }}
+                    // className="carouselImg"
                     ciudad={ciudad.name}
                     alt={`Slide ${index}`}
                   />

@@ -1,29 +1,30 @@
 import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
-import Button from "react-bootstrap/Button";
 import { getData } from "../../store/actions/reduxFetch";
-import { Link } from "react-router-dom";
 import GoogleLogin from "react-google-login";
 
 const responseGoogle = response => {
   console.log(response);
 };
-class LogIn extends Component {
+
+class LoginSubmit extends Component {
   state = {
     username: "",
-    password: "",
-    sessionuser: "",
-    googleuser: ""
+    email: "",
+    password: ""
   };
 
   handleUsername(event) {
     this.setState({ username: event.target.value });
   }
+
   handlePassword(event) {
     this.setState({ password: event.target.value });
   }
 
-  
+  /*handleChange(event) {
+    
+  }*/
 
   handleSubmit(event) {
     event.preventDefault();
@@ -47,6 +48,24 @@ class LogIn extends Component {
     );
   }
 
+  handleMailSubmit(event) {
+    event.preventDefault();
+    event.stopPropagation();
+    const bodyData = {
+      email: "belenhall@hotmail.com"
+    };
+    getData(
+      "/logged",
+      {
+        method: "POST",
+        body: JSON.stringify(bodyData),
+        headers: {
+          "Content-Type": "application/json"
+        }
+      },
+      data => console.log(data)
+    );
+  }
 
   handleGMailSubmit(bodyData) {
     
@@ -65,37 +84,36 @@ class LogIn extends Component {
   }
 
   render() {
+    console.log(this.state.username);
+    console.log(this.state.password);
+
     return (
-      <div id={"logForm"}>
-        <Form className={"col-8"}>
-          <Form.Group controlId={"formBasicEmail"}>
+      <div>
+        <Form className="col-8 logForm">
+          <Form.Group controlId="exampleForm.ControlInput1">
             <Form.Label>Username</Form.Label>
             <Form.Control
               onChange={e => this.handleUsername(e)}
               value={this.state.username}
-              type={"text"}
-              placeholder={"Enter username"}
+              type="text"
+              name={"username"}
+              placeholder="username"
             />
-            <Form.Text className={"text-muted"}>
-              Type your e-mail or username
-            </Form.Text>
-          </Form.Group>
-          <Form.Group controlId={"formBasicPassword"}>
+
             <Form.Label>Password</Form.Label>
             <Form.Control
               onChange={e => this.handlePassword(e)}
-              value={this.state.email}
-              type={"password"}
-              placeholder={"Password"}
+              value={this.state.password}
+              type="text"
+              name={"password"}
+              placeholder="mypassword"
             />
-          </Form.Group>
-          <Form.Group controlId="formBasicCheckbox">
-            <Form.Check type="checkbox" label="Check out" />
-          </Form.Group>
-          <Button  onClick={event => this.handleSubmit(event)} variant="success" type="submit">
-            Submit
-          </Button>
-          <GoogleLogin clientId="1083777488269-qtccrdu14cm0mhds2bo07tkuroik5ak7.apps.googleusercontent.com"
+            <Form.Control
+              onClick={event => this.handleSubmit(event)}
+              type="submit"
+            />
+            <GoogleLogin
+              clientId="1083777488269-qtccrdu14cm0mhds2bo07tkuroik5ak7.apps.googleusercontent.com"
               buttonText="Login"
               onSuccess={responseGoogle => {
                 const body= {
@@ -110,32 +128,18 @@ class LogIn extends Component {
 
               }}
               onFailure={responseGoogle}
-              cookiePolicy={"single_host_origin"}></GoogleLogin>
-
-         
+              cookiePolicy={"single_host_origin"}
+            />
+            <button
+              onClick={event => {
+                this.handleMailSubmit(event);
+              }}
+            ></button>
+          </Form.Group>
         </Form>
-      
       </div>
     );
   }
 }
 
-export default LogIn;
-/*getData("/api/users/register", {
-      method: "POST",
-      body: JSON.stringify(bodyData),
-      headers: {
-        "Content-Type": "application/json"
-      }
-    }, (data)=>alert(data)); */
-const googlelogin =  <GoogleLogin
-clientId="1083777488269-qtccrdu14cm0mhds2bo07tkuroik5ak7.apps.googleusercontent.com"
-buttonText="Login"
-onSuccess={responseGoogle => {
-  console.log(responseGoogle.profileObj.email);
-
-  this.setState({ googleuser: responseGoogle.profileObj.email });
-}}
-onFailure={responseGoogle}
-cookiePolicy={"single_host_origin"}
-/>
+export default LoginSubmit;

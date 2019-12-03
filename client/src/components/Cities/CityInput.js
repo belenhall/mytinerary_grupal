@@ -1,5 +1,6 @@
 import React from "react";
 import { Component } from "react";
+import Form from'react-bootstrap/Form';
 
 export default class CityInput extends Component {
   sendToParent = object => {
@@ -10,7 +11,11 @@ export default class CityInput extends Component {
     this.sendToParent({ input: event.target.value });
   }
 
+ 
   render() {
-    return <input type="text" onChange={e => this.handleChange(e)} />;
+    return <Form.Control type={"text"} 
+    placeholder={"Find your next city"} 
+    className={"col-md-3 ml-2 mr-2 mt-3 justify-content-center"}
+    onChange={e => this.handleChange(e)} />;
   }
 }

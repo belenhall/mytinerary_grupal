@@ -13,8 +13,13 @@ const userSchema = new Schema({
     required: true,
     unique: true
   },
+  
   password: {
     type: String
+  },
+
+  googleAccount: {
+    type: Boolean
   },
 
   profilePicture: {
@@ -23,3 +28,6 @@ const userSchema = new Schema({
 });
 
 module.exports = User = mongoose.model("user", userSchema);
+
+
+

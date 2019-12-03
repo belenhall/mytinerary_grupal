@@ -22,23 +22,16 @@ class ImageButton extends Component {
     const { accion } = this.props;
 
     return (
-      <Fragment>
-        <Link to={`/${this.props.ciudad}`} style={{ textDecoration: "none" }}>
-          <div
-            style={{
-             
-              color: "white",
-              backgroundImage: `url(${myImages.cities[this.props.ciudad]})`,
-              backgroundSize: "cover",
-              border: "solid",
-              borderColor: "white",
-              height: this.props.height,
-              width: this.props.width
-            }}
-            onClick={() => accion()}
-          >
+      <Fragment> 
+        <Link className={"dameroLink"} to={`/${this.props.ciudad}`} >
+        
+          <div className={"damero"}
+            style={{ 
+              backgroundImage: `url(${myImages.cities[this.props.ciudad]})`, 
+              }}
+            onClick={() => accion()}>
             {this.props.ciudad.replace(/[_]/, ' ')}
-          </div>
+        </div>
         </Link>
       </Fragment>
     );

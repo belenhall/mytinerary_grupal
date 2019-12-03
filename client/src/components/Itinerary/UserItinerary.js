@@ -8,6 +8,7 @@ import Activities from "./Activities";
 import { Fragment } from "react";
 import Accordion from "react-bootstrap/Accordion";
 import AccordionContainer from "./AccordionContainer";
+import FaIconPack from "react-icons/lib/fa/arrow-circle-down";
 
 import {
   requestItineraries,
@@ -76,17 +77,46 @@ class UserItinerary extends Component {
 
     return (
       <Fragment>
-        <div className="container">
-          <div className="row">
-            <ProfilePicture username={username} userimage={userimage} />
-            <h1 className="col-4">{title}</h1>
+        <div id="itineraryContainer" className="container rounded mt-1">
 
-            <Likes className="col-4" likes={likes} />
-            <Duration className="col-4" duration={duration} />
-            <span>{priceRange}</span>
-            <span>{hashtags}</span>
+            <ProfilePicture username={username} userimage={userimage} />
+            <h3 id={"itineraryTitle"} className="ml-1 col-4 pt-2 pl-3">
+              {title}
+            </h3>
+
+            <div className="row ">
+              <Likes className="col-4 mt-5" likes={likes} />
+
+              <Duration className="col-4" duration={duration} />
+              <span color="#fff" className="col-4 text-white">
+                {priceRange}
+              </span>
+              <span className="comments text-white pl-4 mt-2">{hashtags}</span>
+
           </div>
-          <AccordionContainer title={title}></AccordionContainer>
+
+          <Accordion>
+            <Accordion.Toggle
+              className="toggleDeco"
+              onClick={() =>
+                filteredActivities == "" ? requestActivities(title) : null
+              }
+              eventKey="0"
+            >
+              {" "}
+              <FaIconPack className="toggleDeco mr-2 row" font-size="7vh" />
+            </Accordion.Toggle>
+            <Accordion.Collapse eventKey="0" className="column">
+              <div>
+                <Activities
+                  activities={
+                    filteredActivities != "" && filteredActivities[0].activities
+                  }
+                />
+                <Comments comments={comments} action={action} />
+              </div>
+            </Accordion.Collapse>
+          </Accordion>
         </div>
       </Fragment>
     );

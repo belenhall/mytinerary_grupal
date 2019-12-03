@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
 import BrowsingContainer from "./Containers/BrowsingContainer";
 import LogIn from "./components/LogIn/LogIn";
+import LoginSubmit from './components/LogIn/LoginSubmit'
 import Register from "./components/Register/Register";
 import CitiesContainer from "./components/Cities/CitiesContainer";
 import FeaturedCity from "./components/Cities/FeaturedCity";
@@ -14,7 +15,7 @@ import { connect } from "react-redux";
 import { reduxFetch } from "./store/actions/reduxFetch";
 import {requestData, requestDataSuccess } from "./store/actions/cityActions"
 import { requestItineraries, requestItinerariesSuccess } from "./store/actions/itineraryActions";
-
+import RegisterContainer from './components/Register/RegisterContainer'
 const mapStateToProps = state => {
   return {
     reduxNavData: state.nav.navData,
@@ -37,9 +38,6 @@ class App extends Component {
     };
   }
 
-  sendStateToMain = value => {
-    this.setState(value);
-  };
 
   componentDidMount() {
     const { accion } = this.props;
@@ -58,10 +56,7 @@ class App extends Component {
         <Route path="" component={Header}></Route>
         <Switch>
           <BrowsingContainer
-            callback={
-              this.sendStateToMain /*HAY QUE ADAPTAR EL CAROUSEL A REDUX */
-            }
-            path="/index"
+           exact path="/"
           ></BrowsingContainer>
           <Route path="/LogIn" component={LogIn}></Route>
           <Route path="/Register" component={Register}></Route>
@@ -76,7 +71,7 @@ class App extends Component {
           </Route>
         </Switch>
         <Route path="" component={Footer}></Route>
-        <Redirect from="/" to="/index" />
+        
       </div>
     );
   }

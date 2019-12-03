@@ -45,22 +45,17 @@ class CitiesContainer extends Component {
     return (
       <Switch>
         <Route exact path={"/cities"}>
-          <div className="container">
-            <div className="row justify-content-start">
-              <div className="col-3">
-                <h1>Destination</h1>
-                <CityInput callbackFromParent={this.sendStateToParent} />
-              </div>
-              <div className="container">
-                <div className="row">
-                  <CitiesDisplay2
+          <div className="container column">
+                  <div className="row pl-1 mb-1">     
+                    <h3>Destination</h3><CityInput callbackFromParent={this.sendStateToParent} />
+                </div> 
+                <div className="row dameroBack">
+                       <CitiesDisplay2
                     className="col-6"
                     data={ciudades}
-                    callbackFromParent={mainCallback}
-                  />
+                    callbackFromParent={mainCallback}/>
                 </div>
-              </div>
-            </div>
+            
           </div>
         </Route>
         <Route exact path={`/Barcelona`}>

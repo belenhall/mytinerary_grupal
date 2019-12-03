@@ -48,8 +48,6 @@ class FeaturedCity extends Component {
   }
   render() {
     const { itineraries } = this.props;
-   /* const { activities } = this.props;
-    console.log(activities);*/
     console.log(
       `FEATURED ITINERARIES FOR ${this.props.city}: ${JSON.stringify(
         itineraries
@@ -65,25 +63,26 @@ class FeaturedCity extends Component {
         hashtags={itinerary.hashtags}
         userActivities={itinerary.activities}
         accordionKey={index}
-        /*activities={itinerary.activities.filter(activity =>
-          itinerary.activities.includes(activity)
-        )}*/
       />
     ));
 
     return (
       <Fragment>
-        <h1>{this.props.city.replace(/[_]/, " ")}</h1>
-        <div className="container">
-          <div className="row">
-            <img className="col-6" src={myImages.cities[this.props.city]}></img>
-            <div className="col-6">
-              <p>{myTexts.cities[this.props.city]}</p>
-            </div>
-            {itineraryList}
+      <div className="singleCity" class="container col-md-12">
+         <h1 className="featTitle">{this.props.city.replace(/[_]/, " ")}</h1>
+      <div className="row col-md-12">
+          <div className="col-md-3 col-sd-2">
+            <img className="featPic" src={myImages.cities[this.props.city]}></img>    
           </div>
-        </div>
-      </Fragment>
+          <div className="col-md-9 col-sd-14">
+              <h6 className="rounded cityDescript">{myTexts.cities[this.props.city]}</h6  >
+          </div>
+      </div> 
+      <div>
+          {itineraryList}
+      </div>
+    </div>
+  </Fragment>
     );
   }
 }
